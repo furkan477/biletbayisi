@@ -28,7 +28,7 @@ class FlightsController extends Controller
             ],
         ];
 
-        $response = Http::post("https://biletbayisi.com/api/flight-ticket/get-flights", $FlightInfo);
+        $response = Http::post("https://biletbayisi.com", $FlightInfo);
 
         $data = json_decode($response->getBody(), true);
 
